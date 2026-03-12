@@ -6,7 +6,7 @@ Here's a copy of my Archivist setup. I use this to run a node in the devnet and 
 ```yaml
 services:
   archivist-base:
-    image: durabilitylabs/archivist-node:sha-b37bc60-dist-tests
+    image: durabilitylabs/archivist-node:sha-ef6c958-dist-tests
     pull_policy: always
     environment:
       - NETWORK=devnet
@@ -53,7 +53,7 @@ services:
 ## Things you need to do
 - Copy these files and same them on your server
 - Check the ports specified in the docker-compose.yaml:
-    - It is very important that 8070 and 8090 and exposed to the internet.
+    - It is very important that 8070 and 8090 are exposed to the internet.
     - It is equally important that 8080 IS NOT exposed to the internet.
 - Generate and save an Ethereum account. DO NOT USE your eth mainnet key, of course.
 - Put the new private key in the "ETH_PRIVATE_KEY" field.
@@ -62,6 +62,7 @@ services:
     - Use the [Testnet Faucet](https://docs.archivist.storage/networks/testnet#endpoints)
 
 ## Things you may want to do
+- Switch to a different version, or use `durabilitylabs/archivist-node:latest-dist-tests`
 - Choose different ports
 - Adjust the storage quota
 - Switch to a different network
